@@ -1,5 +1,6 @@
 package com.example.domain.user.service;
 
+<<<<<<< HEAD
 import java.util.List;
 
 import com.example.domain.user.model.MUser;
@@ -12,5 +13,13 @@ public interface UserService {
     
     /**ユーザー取得*/
     public List<MUser> getUsers();
+=======
+import com.example.domain.user.model.MUser;
+
+public interface UserService {
+    
+    /**ユーザー登録*/
+    public void signup(MUser user);
+>>>>>>> refs/heads/master
 
 }
