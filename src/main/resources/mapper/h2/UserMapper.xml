@@ -6,9 +6,9 @@
 <!-- Mapperとxmlのマッピング -->
 <mapper namespace="com.example.repository.UserMapper">
 
-<!-- ユーザー1件登録 -->
-<insert id="insertOne">
-  insert into m_user(
+  <!-- ユーザー1件登録 -->
+  <insert id="insertOne">
+    insert into m_user(
     user_id
     ,password
     ,user_name
@@ -17,8 +17,8 @@
     ,gender
     ,department_id
     ,role
-  )
-  values(
+    )
+    values(
     #{userId}
     ,#{password}
     ,#{userName}
@@ -27,6 +27,15 @@
     ,#{gender}
     ,#{departmentId}
     ,#{role}
-  )
+    )
   </insert>
+  <!-- ユーザー複数件取得 -->
+
+  <select id="findMany" resultType="MUser">
+    select
+    *
+    from
+    m_user
+  </select>
+
 </mapper>
